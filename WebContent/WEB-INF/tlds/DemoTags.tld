@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	This is an example of a tag library descriptor for Custom tags.
+ -->
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+		version="2.0">
+
+	<description>EmployeeDirectory Demo Tags Library</description>
+	<tlib-version>3.0</tlib-version>
+	<short-name>EmployeeDirectoryDemoTags</short-name>
+	<uri>http://mason.gmu.edu/~gmartinc/swe642</uri>
+
+	
+	<tag> 
+		<description>This tag displays identification information</description> 
+		<name>idtag</name> 
+		<tag-class>EmployeeAssign.tags.EmployeeDirectoryCustomTagExample</tag-class>
+		<body-content>empty</body-content>
+
+		<attribute>
+			<name>name</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag> 
+	<tag>
+      	<description>This tag runs an iteration through a Collection of errors, and prints them out as HTML.</description> 
+      	<name>errorList</name>
+      	<tag-class>EmployeeAssign.tags.ErrorListTag</tag-class>
+      	<body-content>JSP</body-content>
+      	<variable>
+        	<name-given>error</name-given>
+        	<variable-class>java.lang.Object</variable-class>
+        	<declare>true</declare>
+      	</variable>  
+    	  	<attribute>
+          	<name>errors</name>
+          	<required>true</required>
+          	<rtexprvalue>true</rtexprvalue>
+      	</attribute>      	
+    </tag> 
+</taglib>
